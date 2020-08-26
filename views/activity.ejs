@@ -1,0 +1,35 @@
+<%- include('partials/header') %>
+
+</head>
+<body>
+	<div class="container">
+	<div class="site-title">
+		<h1>Please fill in the details of your activity</h1>
+		<form method="POST" action="/staff/activity" class="site-form">
+			<div class="row">
+				<div class="col-25">
+					<label for="StaffId">Staff ID:</label>
+				</div>
+				<div class="col-75">
+				<input type="text" id="staffId" name="staffId" placeholder="Enter Your Staff ID" required>	
+				</div>
+			</div>
+		  <div class="row">
+		  	<div class="col-25">
+		  		<label for="activityType">Purpose:</label>
+		  	</div>
+		  	<div class="col-75">
+		  		<input type="text" id="activityType" name="activityType" placeholder="What is the purpose of this activity" required>
+		  	</div>
+		  </div>
+		  	<div>
+			<input type="submit" value="Submit">
+			</div>
+		  </div>  
+		</form>
+	</div>
+	<div class="overlay"></div>
+	<img src="/img/HBH.jpg">
+   </div>
+</body>
+<%- include('partials/footer') %>

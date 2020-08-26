@@ -1,0 +1,76 @@
+<%- include('partials/header') %>
+
+<body>
+	<div class="container">
+	<div class="site-title">
+		<div class="info-bar">
+			<p class="err"><%= message %></p>
+		</div>
+		<h1>Please fill in your details</h1>
+		<form method="POST" action="/guest" class="site-form">
+			<div class="row">
+				<div class="col-25">
+					<label for="fname">Full-name:</label>
+				</div>
+				<div class="col-75">
+				<input type="text" id="fname" name="fname" placeholder="Akin" required>	
+				</div>
+			</div>
+		  <div class="row">
+		  	<div class="col-25">
+		  		<label for="email">Email:</label>
+		  	</div>
+		  	<div class="col-75">
+		  		<input type="text" id="email" name="email" placeholder="akin@highbridgehomesltd.com" required>
+		  	</div>
+		  </div>
+		  <div class="row">
+		  	<div class="col-25">
+		  		<label for="phone">Phone-number:</labe>
+		  	</div>
+		  	<div class="col-75">
+		  		<input type="text" id="phone" name="phone" placeholder="080123456789" required>
+		  	</div>
+		  </div>
+		  <div class="row">
+		  	<div class="col-25">
+		  		<label for="Address">Address:</label>
+		  	</div>
+		  	<div class="col-75">
+		  		<input type="text" id="address" name="address" placeholder="Awoyaya" required>
+		  	</div>
+		  </div>
+		 <div class="row">
+		 	<div class="col-25">
+		 		<label for="to whom">Who to see:</label>
+		 	</div>
+		 	<div class="col-75">
+		 		<input type="text" id="Who" name="whom" placeholder="Mr Akin" required>
+		 	</div>
+		 </div>
+		 <div class="row">
+		  <div class="col-25">
+		  <label for="Purpose">Purpose of coming:</label>
+		</div>
+		<div class="col-75">
+			  <select name="purpose" id="purpose">
+			  <option value="official">For an official visit</option>
+			  <option value="unofficial">For an unofficial visit</option>
+			  <option value="appointment">I have a appointment</option>
+			  <option value="business">On business matters</option>
+			  <option value="job">Seeking for job</option>
+			</select>
+			</div>
+		</div>
+		<div>
+			<input type="submit" placeholder="Submit">
+		</div>  
+		</form>
+	</div>
+	<div class="overlay"></div>
+	<img src="img/HBH.jpg">
+   </div>
+</body>
+</html>
+
+<%- include('partials/footer') %>

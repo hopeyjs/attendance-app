@@ -1,0 +1,32 @@
+body{
+	margin: 0px;
+	border-spacing: 0px;
+}
+#header{
+	width: 100%;
+	height: 150px;
+	background: black;
+	color: white;
+}
+#sidebar{
+	width: 300px;
+	height: 400px;
+	background: #27ae60;
+	float: left;
+}
+#data{
+	height: 100vh;
+	background: #grey;
+}
+#adminlogo{
+	background: white;
+	border-radius: 50px;
+}
+ul li{
+	padding-top: 20px;
+	border-bottom: 2px solid grey;
+}
+ul li:hover{
+	background: grey;
+	color: green;
+}

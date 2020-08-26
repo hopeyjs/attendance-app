@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+
+<body>
+	<div class="container">
+	<div class="site-title">
+		<div class="info-bar">
+			<% if(error) { %>
+			<p class="err"><%= error %></p>
+			<% } %>
+			<% if(time) { %>
+				<p class="err">you have successfully clocked in <%= time %></p> 
+				<% } %>
+		</div>
+		<h1>CLOCK IN</h1>
+		<p>Please enter your Staff-ID</p>
+		<div class="site-button">
+			<form method="POST" action="/staff/clock-in">
+				<input type="text" name="staffId" size="50" required>
+				<button class="page">Clock In</button>
+			</form>
+		</div>
+			
+		</div>
+	</div>
+	<div class="overlay"></div>
+   </div>
+</body>
+
+<%- include('partials/footer') %>
