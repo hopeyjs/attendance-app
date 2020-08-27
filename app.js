@@ -14,8 +14,13 @@ app.use(bodyParser.urlencoded({extended: true}))
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 
-mongoose.connect('mongodb://localhost/attendanceApp', {useUnifiedTopology:true, useNewUrlParser:true}, console.log('DB Connected'));
+const url = 'mongodb+srv://highbridge:higbridgehomes@highbridge.ijlem.mongodb.net/highbridge?retryWrites=true&w=majority'
 
+const dbConnect = async () => {
+    await mongoose.connect('mongodb+srv://highbridge:higbridgehomes@highbridge.ijlem.mongodb.net/highbridge?retryWrites=true&w=majority', {useUnifiedTopology:true, useNewUrlParser:true}, console.log('DB Connected'))
+};
+
+dbConnect();
 
 // //declare routes
 const routes     = require('./routes/routes');
